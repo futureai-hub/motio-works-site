@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Motio Work — App Development Studio</title>
+  <meta name="description"
+    content="Motio Work is a user-centered app development studio combining warm sensibilities and innovative technologies.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0F1117;
+      --surface: #1A1C25;
+      --card: #22252F;
+      --purple: #BB3AFF;
+      --magenta: #FF2D7B;
+      --cyan: #00E5FF;
+      --lime: #A8FF00;
+      --amber: #FFB800;
+      --text: #FFFFFF;
+      --text-dim: rgba(255, 255, 255, 0.5);
+      --border: rgba(255, 255, 255, 0.06);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    /* --- Hero --- */
+    .hero {
+      text-align: center;
+      padding: 72px 24px 48px;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .logo-mark {
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(135deg, var(--purple), var(--magenta));
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      box-shadow: 0 6px 24px rgba(187, 58, 255, 0.25);
+    }
+
+    .logo-text {
+      font-size: 26px;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+    }
+
+    .logo-text span {
+      background: linear-gradient(90deg, var(--cyan), var(--lime));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .tagline-card {
+      max-width: 520px;
+      margin: 0 auto 48px;
+      background: linear-gradient(135deg, rgba(187, 58, 255, 0.06), rgba(0, 229, 255, 0.04));
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 16px;
+      padding: 28px 32px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .tagline-card::before {
+      content: '"';
+      position: absolute;
+      top: -8px;
+      left: 16px;
+      font-size: 72px;
+      font-weight: 900;
+      background: linear-gradient(135deg, var(--purple), var(--magenta));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      opacity: 0.15;
+      line-height: 1;
+    }
+
+    .tagline {
+      color: var(--text-dim);
+      font-size: 15px;
+      line-height: 1.8;
+      position: relative;
+    }
+
+    .tagline em {
+      font-style: normal;
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .tagline .glow {
+      font-style: normal;
+      background: linear-gradient(90deg, var(--cyan), var(--lime));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 700;
+    }
+
+    /* --- Apps Grid --- */
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 28px;
+      padding: 0 24px;
+      max-width: 640px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .section-header .line {
+      flex: 1;
+      max-width: 120px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.12), transparent);
+    }
+
+    .section-header .label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      background: linear-gradient(135deg, rgba(187, 58, 255, 0.08), rgba(255, 45, 123, 0.06));
+      border: 1px solid rgba(187, 58, 255, 0.15);
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      color: rgba(255, 255, 255, 0.6);
+      text-transform: uppercase;
+    }
+
+    .section-header .label .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--purple);
+      box-shadow: 0 0 8px var(--purple);
+    }
+
+    .apps {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 0 24px 48px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .app-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      transition: transform 0.2s, box-shadow 0.2s;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .app-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+
+    .app-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      flex-shrink: 0;
+    }
+
+    .app-icon.flexzen {
+      background: linear-gradient(135deg, var(--purple), var(--magenta));
+      box-shadow: 0 4px 16px rgba(187, 58, 255, 0.2);
+    }
+
+    .app-icon.coming {
+      background: var(--surface);
+      border: 1px dashed rgba(255, 255, 255, 0.15);
+      font-size: 20px;
+    }
+
+    .app-info {
+      flex: 1;
+    }
+
+    .app-name {
+      font-size: 16px;
+      font-weight: 800;
+      margin-bottom: 4px;
+    }
+
+    .app-desc {
+      font-size: 13px;
+      color: var(--text-dim);
+      line-height: 1.5;
+    }
+
+    .app-badge {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      padding: 4px 10px;
+      border-radius: 6px;
+      text-transform: uppercase;
+      flex-shrink: 0;
+    }
+
+    .badge-live {
+      background: rgba(168, 255, 0, 0.1);
+      color: var(--lime);
+    }
+
+    .badge-soon {
+      background: rgba(255, 184, 0, 0.1);
+      color: var(--amber);
+    }
+
+    .app-links {
+      display: flex;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .app-links a {
+      font-size: 12px;
+      color: var(--cyan);
+      text-decoration: none;
+      font-weight: 600;
+      padding: 4px 0;
+      transition: opacity 0.2s;
+    }
+
+    .app-links a:hover {
+      opacity: 0.7;
+    }
+
+    .app-links .sep {
+      color: rgba(255, 255, 255, 0.15);
+      font-size: 12px;
+    }
+
+    /* --- Footer --- */
+    footer {
+      text-align: center;
+      padding: 40px 24px;
+      border-top: 1px solid var(--border);
+      color: var(--text-dim);
+      font-size: 13px;
+    }
+
+    footer a {
+      color: var(--cyan);
+      text-decoration: none;
+    }
+
+    /* --- Responsive --- */
+    @media (max-width: 480px) {
+      .hero {
+        padding: 48px 20px 32px;
+      }
+
+      .logo-text {
+        font-size: 22px;
+      }
+
+      .app-card {
+        padding: 18px;
+        gap: 14px;
+      }
+
+      .app-badge {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="hero">
+    <div class="logo">
+      <div style="width: 48px; height: 48px; border-radius: 14px; overflow: hidden; flex-shrink: 0;"><img src="logo.png"
+          alt="Motio Work" style="width: 160%; height: 160%; margin: -32.5% 0 0 -32.5%; display: block;"></div>
+      <div class="logo-text">Motio <span>Work</span></div>
+    </div>
+    <video src="MotioWorkVision.mp4" autoplay loop muted playsinline
+      style="width: 500px; border-radius: 24px; display: block; margin: 24px auto 8px;"></video>
+    <div class="tagline-card">
+      <p class="tagline">
+        A <em>user-centered</em> app development studio that combines
+        <em>warm sensibilities</em> and <em>innovative technologies</em>
+        to have a <span class="glow">positive impact</span> on everyday life.
+      </p>
+    </div>
+  </div>
+
+  <div class="section-header">
+    <div class="line"></div>
+    <div class="label">
+      <div class="dot"></div> Our Apps
+    </div>
+    <div class="line"></div>
+  </div>
+
+  <div class="apps">
+    <!-- FlexZen Motio -->
+    <div class="app-card">
+      <img src="flexzen-motio/icon.png" alt="FlexZen Motio"
+        style="width: 56px; height: 56px; border-radius: 14px; flex-shrink: 0;">
+      <div class="app-info">
+        <div class="app-name">FlexZen Motio</div>
+        <div class="app-desc">Build a daily hand movement routine with real-time tracking</div>
+        <div class="app-links">
+          <a href="flexzen-motio/privacy-policy.html">Privacy Policy</a>
+        </div>
+      </div>
+      <div class="app-badge badge-live">Soon</div>
+    </div>
+
+    <!-- Iterative Reading -->
+    <div class="app-card">
+      <img src="iterative_reading/icon.png" alt="Iterative Reading"
+        style="width: 56px; height: 56px; border-radius: 14px; flex-shrink: 0;">
+      <div class="app-info">
+        <div class="app-name">Iterative Reading</div>
+        <div class="app-desc">All-in-one management for iterative reading of study materials</div>
+        <div class="app-links">
+          <a href="iterative_reading/privacy-policy.html">Privacy Policy</a>
+        </div>
+      </div>
+      <div class="app-badge badge-live">Soon</div>
+    </div>
+
+    <!-- Coming Soon Placeholder -->
+    <div class="app-card" style="opacity: 0.5; pointer-events: none;">
+      <div class="app-icon coming">🚀</div>
+      <div class="app-info">
+        <div class="app-name">Coming Soon</div>
+        <div class="app-desc">New app in development...</div>
+      </div>
+      <div class="app-badge badge-soon">Soon</div>
+    </div>
+  </div>
+
+  <footer>
+    <div style="max-width: 640px; margin: 0 auto 24px; padding: 0 24px;">
+      <div
+        style="background: linear-gradient(135deg, rgba(187,58,255,0.06), rgba(0,229,255,0.04)); border: 1px solid rgba(187,58,255,0.12); border-radius: 14px; padding: 20px 24px; position: relative; text-align: center; min-height: 24px;">
+        <span
+          style="position: absolute; left: 24px; top: 50%; transform: translateY(-50%); font-size: 12px; font-weight: 700; letter-spacing: 1px; color: rgba(255,255,255,0.4); text-transform: uppercase;">Contact
+          Us</span>
+        <a href="mailto:motioWork@gmail.com" style="font-size: 14px; text-decoration: none; font-weight: 600;"><span
+            style="color: white; -webkit-text-fill-color: white;">✉</span> <span
+            style="background: linear-gradient(90deg, #BB3AFF, #FF2D7B); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">motioWork@gmail.com</span></a>
+        <a href="app-ads.txt"
+          style="position: absolute; right: 24px; top: 50%; transform: translateY(-50%); font-size: 11px; color: rgba(255,255,255,0.2); text-decoration: none;">app-ads.txt</a>
+      </div>
+    </div>
+    <p>&copy; 2026 Motio Work. All rights reserved.</p>
+  </footer>
+
+</body>
+
+</html>
