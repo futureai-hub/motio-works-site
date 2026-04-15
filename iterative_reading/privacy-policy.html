@@ -1,525 +1,405 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy — FlexZen Motio</title>
-  <meta name="description" content="Privacy Policy for FlexZen Motio, a camera-based hand exercise app by Motio Works.">
-  <link rel="icon" type="image/png" href="../logo.png">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <title>Iteration - N회독 플래너 | 개인정보처리방침</title>
+  <meta name="description" content="Iteration - N회독 플래너 앱의 개인정보처리방침입니다.">
   <style>
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
     :root {
-      --bg-primary: #0a0a0f;
-      --bg-secondary: #12121a;
-      --bg-card: #1a1a2e;
-      --purple-500: #6C3AED;
-      --purple-400: #8B5CF6;
-      --purple-300: #A78BFA;
-      --cyan-500: #06B6D4;
-      --cyan-400: #22D3EE;
-      --text-primary: #F1F5F9;
-      --text-secondary: #94A3B8;
-      --text-muted: #64748B;
-      --gradient-main: linear-gradient(135deg, #6C3AED 0%, #06B6D4 100%);
-      --border-subtle: rgba(255,255,255,0.06);
-      --radius-lg: 20px;
+      --bg: #0f0f14;
+      --surface: #1a1a24;
+      --surface-hover: #22222e;
+      --border: #2a2a3a;
+      --text: #e8e6f0;
+      --text-secondary: #9e9cb0;
+      --accent: #a78bfa;
+      --accent-dim: rgba(167, 139, 250, 0.15);
+      --heading: #c4b5fd;
+      --link: #818cf8;
+      --radius: 12px;
     }
 
-    html { scroll-behavior: smooth; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      background: var(--bg-primary);
-      color: var(--text-primary);
-      min-height: 100vh;
-      overflow-x: hidden;
+      font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+      font-size: 15px;
     }
 
-    .ambient-bg {
-      position: fixed; inset: 0; z-index: 0; pointer-events: none;
-      background:
-        radial-gradient(ellipse 600px 400px at 15% 10%, rgba(108,58,237,0.06) 0%, transparent 70%),
-        radial-gradient(ellipse 500px 350px at 85% 90%, rgba(6,182,212,0.04) 0%, transparent 70%);
-    }
-
-    .wrapper {
-      position: relative; z-index: 1;
-      max-width: 760px;
+    .container {
+      max-width: 780px;
       margin: 0 auto;
-      padding: 0 24px;
+      padding: 48px 24px 80px;
     }
 
-    /* ─── Header ─── */
-    .page-header {
-      padding: 40px 0 32px;
+    header {
+      text-align: center;
+      margin-bottom: 48px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--border);
     }
 
-    .back-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      color: var(--text-secondary);
-      font-size: 13px;
-      font-weight: 500;
-      text-decoration: none;
-      margin-bottom: 24px;
-      transition: color 0.2s;
-    }
-    .back-link:hover { color: var(--purple-300); }
-    .back-link svg { width: 14px; height: 14px; }
-
-    .page-header h1 {
+    header h1 {
       font-size: 28px;
-      font-weight: 800;
-      letter-spacing: -0.5px;
-      background: var(--gradient-main);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 8px;
-    }
-
-    .effective-date {
-      font-size: 13px;
-      color: var(--text-muted);
-    }
-
-    /* ─── Content ─── */
-    .content-card {
-      background: var(--bg-card);
-      border-radius: var(--radius-lg);
-      border: 1px solid var(--border-subtle);
-      padding: 36px 32px;
-      margin-bottom: 24px;
-    }
-
-    .content-card h2 {
-      font-size: 16px;
       font-weight: 700;
-      color: var(--purple-300);
-      margin-bottom: 14px;
-      letter-spacing: -0.2px;
+      color: var(--heading);
+      margin-bottom: 8px;
+      letter-spacing: -0.5px;
     }
 
-    .content-card h3 {
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--cyan-400);
-      margin: 16px 0 8px;
-    }
-
-    .content-card p {
-      font-size: 14px;
-      line-height: 1.8;
-      color: var(--text-secondary);
+    header .app-name {
+      font-size: 15px;
+      color: var(--accent);
+      font-weight: 500;
       margin-bottom: 12px;
     }
 
-    .content-card ul {
-      margin: 8px 0 16px 20px;
+    header .effective-date {
+      font-size: 13px;
       color: var(--text-secondary);
-      font-size: 14px;
-      line-height: 1.8;
     }
 
-    .content-card li { margin-bottom: 4px; }
-
-    .highlight {
-      color: var(--text-primary);
+    h2 {
+      font-size: 20px;
       font-weight: 600;
+      color: var(--heading);
+      margin: 40px 0 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
     }
 
-    .data-table {
+    h3 {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text);
+      margin: 24px 0 12px;
+    }
+
+    p { margin-bottom: 12px; }
+
+    ul, ol {
+      margin: 8px 0 16px 20px;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      margin: 16px 0;
+    }
+
+    .card-title {
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 8px;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    table {
       width: 100%;
       border-collapse: collapse;
-      margin: 12px 0 16px;
+      margin: 12px 0 20px;
+      font-size: 14px;
+    }
+
+    th, td {
+      padding: 10px 12px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+
+    th {
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+
+    td {
+      color: var(--text-secondary);
+    }
+
+    .highlight {
+      background: var(--accent-dim);
+      border-left: 3px solid var(--accent);
+      padding: 12px 16px;
+      border-radius: 0 var(--radius) var(--radius) 0;
+      margin: 16px 0;
+      font-size: 14px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    .badge-local { background: #1e3a2f; color: #6ee7b7; }
+    .badge-server { background: #1e293b; color: #93c5fd; }
+    .badge-third { background: #2d1b4e; color: #c4b5fd; }
+
+    footer {
+      margin-top: 60px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      color: var(--text-secondary);
       font-size: 13px;
     }
 
-    .data-table th,
-    .data-table td {
-      padding: 10px 14px;
-      text-align: left;
-      border-bottom: 1px solid var(--border-subtle);
+    @media (max-width: 600px) {
+      .container { padding: 32px 16px 60px; }
+      header h1 { font-size: 22px; }
+      h2 { font-size: 18px; }
+      table { font-size: 13px; }
+      th, td { padding: 8px; }
     }
-
-    .data-table th {
-      color: var(--purple-300);
-      font-weight: 600;
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.8px;
-      background: rgba(108,58,237,0.06);
-    }
-
-    .data-table td {
-      color: var(--text-secondary);
-    }
-
-    .tag {
-      display: inline-block;
-      padding: 2px 8px;
-      border-radius: 4px;
-      font-size: 11px;
-      font-weight: 600;
-    }
-
-    .tag--local {
-      background: rgba(34,211,238,0.1);
-      color: var(--cyan-400);
-    }
-
-    .tag--remote {
-      background: rgba(251,191,36,0.1);
-      color: #FBBF24;
-    }
-
-    .tag--none {
-      background: rgba(74,222,128,0.1);
-      color: #4ADE80;
-    }
-
-    /* ─── Footer ─── */
-    footer {
-      padding: 40px 0 32px;
-      text-align: center;
-      border-top: 1px solid var(--border-subtle);
-      margin-top: 32px;
-    }
-
-    footer p {
-      font-size: 12px;
-      color: var(--text-muted);
-      line-height: 1.8;
-    }
-
-    footer a {
-      color: var(--text-secondary);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-    footer a:hover { color: var(--purple-300); }
-
-    @media (max-width: 640px) {
-      .content-card { padding: 24px 20px; }
-      .page-header h1 { font-size: 22px; }
-      .data-table { font-size: 12px; }
-      .data-table th, .data-table td { padding: 8px 10px; }
-    }
-
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(12px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .animate-in {
-      animation: fadeUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-      opacity: 0;
-    }
-    .delay-1 { animation-delay: 0.08s; }
-    .delay-2 { animation-delay: 0.16s; }
-    .delay-3 { animation-delay: 0.24s; }
-    .delay-4 { animation-delay: 0.32s; }
-    .delay-5 { animation-delay: 0.40s; }
-    .delay-6 { animation-delay: 0.48s; }
-    .delay-7 { animation-delay: 0.56s; }
-    .delay-8 { animation-delay: 0.64s; }
   </style>
 </head>
 <body>
+  <div class="container">
 
-  <div class="ambient-bg"></div>
+    <header>
+      <div class="app-name">Iteration - N회독 플래너</div>
+      <h1>개인정보처리방침</h1>
+      <p class="effective-date">시행일: 2026년 4월 15일 | 최종 수정: 2026년 4월 15일</p>
+    </header>
 
-  <div class="wrapper">
+    <!-- ─── 1. 개요 ─── -->
+    <h2>1. 개요</h2>
+    <p>
+      Motio Works(이하 "개발자")는 <strong>Iteration - N회독 플래너</strong>(이하 "본 앱")를 제공하며,
+      이용자의 개인정보를 소중히 여깁니다. 본 개인정보처리방침은 본 앱이 어떤 정보를 수집·이용·보관·공유하는지,
+      그리고 이용자가 자신의 정보에 대해 어떤 권리를 행사할 수 있는지를 설명합니다.
+    </p>
+    <p>
+      본 앱을 설치하거나 사용함으로써 이용자는 본 방침에 동의한 것으로 간주됩니다.
+      동의하지 않을 경우 앱 사용을 중단하고 삭제해 주시기 바랍니다.
+    </p>
 
-    <!-- ─── Header ─── -->
-    <div class="page-header animate-in">
-      <a href="../index.html" class="back-link">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
-        Back to Motio Works
-      </a>
-      <h1>Privacy Policy</h1>
-      <p class="effective-date">FlexZen Motio &middot; Effective Date: March 17, 2026</p>
-    </div>
+    <!-- ─── 2. 수집하는 정보 ─── -->
+    <h2>2. 수집하는 정보</h2>
 
-    <!-- 1. Introduction -->
-    <div class="content-card animate-in delay-1">
-      <h2>1. Introduction</h2>
-      <p>
-        Motio Works ("<span class="highlight">we</span>," "<span class="highlight">us</span>," or "<span class="highlight">our</span>")
-        operates the <span class="highlight">FlexZen Motio</span> mobile application (the "<span class="highlight">App</span>").
-        This Privacy Policy explains how we collect, use, and protect your information when you use our App on Android and iOS devices.
-      </p>
-      <p>
-        By using the App, you agree to the collection and use of information as described in this policy.
-        If you do not agree, please do not use the App.
-      </p>
-    </div>
+    <h3>2.1 기기 내 저장 데이터 <span class="badge badge-local">로컬 전용</span></h3>
+    <p>아래 데이터는 이용자의 기기에만 저장되며, 외부 서버로 전송되지 않습니다.</p>
+    <table>
+      <thead>
+        <tr><th>데이터</th><th>목적</th><th>저장 위치</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>과목·교재 정보</td><td>학습 계획 관리</td><td>SQLite (기기 내부)</td></tr>
+        <tr><td>회독(Iteration) 일정</td><td>반복 학습 스케줄링</td><td>SQLite (기기 내부)</td></tr>
+        <tr><td>학습 기록 (날짜, 시간, 페이지)</td><td>순공시간 측정 및 통계</td><td>SQLite (기기 내부)</td></tr>
+        <tr><td>타이머 설정 (Focus/Break 시간)</td><td>개인화된 타이머 운영</td><td>SharedPreferences</td></tr>
+        <tr><td>집중 부스터 상태 (만료일)</td><td>인앱결제 상품 활성 여부 확인</td><td>SharedPreferences</td></tr>
+        <tr><td>앱 설정 (테마, 알림 등)</td><td>사용자 환경 유지</td><td>SharedPreferences</td></tr>
+      </tbody>
+    </table>
 
-    <!-- 2. Information We Collect -->
-    <div class="content-card animate-in delay-2">
-      <h2>2. Information We Collect</h2>
+    <h3>2.2 자동 수집 정보 <span class="badge badge-third">서드파티</span></h3>
+    <p>아래 정보는 서드파티 서비스를 통해 자동으로 수집될 수 있습니다.</p>
 
-      <h3>2.1 Camera Data (On-Device Only)</h3>
-      <p>
-        The App uses your device camera to perform <span class="highlight">real-time hand tracking</span> using
-        Google's MediaPipe technology. All camera processing occurs <span class="highlight">entirely on your device</span>.
-        We do <span class="highlight">not</span> capture, store, record, or transmit any images, video, or camera data
-        to any server.
-      </p>
-
-      <h3>2.2 Exercise Data (Local Storage)</h3>
-      <p>
-        The App stores your exercise records, routine configurations, and preferences locally on your device
-        using SharedPreferences. This data includes:
-      </p>
+    <div class="card">
+      <div class="card-title">Google Firebase Analytics</div>
+      <p>앱 사용 패턴(화면 전환, 기능 사용 빈도)을 익명으로 분석하여 서비스 품질을 개선합니다.</p>
       <ul>
-        <li>Exercise type, repetitions, duration, and hand mode</li>
-        <li>Daily routine configuration</li>
-        <li>App settings (landmark display, notification preferences)</li>
-        <li>Reminder time and weekday selections</li>
-      </ul>
-      <p>
-        This data is stored <span class="highlight">only on your device</span> and is
-        <span class="highlight">never transmitted</span> to our servers or any third party.
-      </p>
-
-      <h3>2.3 Analytics Data</h3>
-      <p>
-        We use <span class="highlight">Firebase Analytics</span> (provided by Google) to collect anonymous usage data,
-        including:
-      </p>
-      <ul>
-        <li>App open events and screen views</li>
-        <li>Session duration and frequency</li>
-        <li>Device model, OS version, and language</li>
-        <li>General geographic region (country-level)</li>
-      </ul>
-      <p>
-        This data is collected in aggregate and does not personally identify you. For more information,
-        see <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" style="color:var(--cyan-400);">Google's Privacy Policy</a>.
-      </p>
-
-      <h3>2.4 Advertising Data</h3>
-      <p>
-        The App displays advertisements through <span class="highlight">Google AdMob</span>.
-        The AdMob SDK may collect the following information:
-      </p>
-      <ul>
-        <li>Advertising ID (GAID on Android, IDFA on iOS)</li>
-        <li>IP address</li>
-        <li>Device information (model, OS version, screen size)</li>
-        <li>App interaction data for ad personalization</li>
-      </ul>
-      <p>
-        On iOS, the App requests your consent via the App Tracking Transparency (ATT) prompt
-        before accessing your advertising identifier for personalized ads.
-      </p>
-    </div>
-
-    <!-- 3. Data Collection Summary -->
-    <div class="content-card animate-in delay-3">
-      <h2>3. Data Collection Summary</h2>
-      <table class="data-table">
-        <thead>
-          <tr>
-            <th>Data Type</th>
-            <th>Storage</th>
-            <th>Transmitted</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Camera frames / hand landmarks</td>
-            <td>Device memory only</td>
-            <td><span class="tag tag--none">No</span></td>
-          </tr>
-          <tr>
-            <td>Exercise records &amp; settings</td>
-            <td>Device (SharedPreferences)</td>
-            <td><span class="tag tag--none">No</span></td>
-          </tr>
-          <tr>
-            <td>Crash logs</td>
-            <td>Device local file</td>
-            <td><span class="tag tag--none">No</span></td>
-          </tr>
-          <tr>
-            <td>App analytics events</td>
-            <td>Google servers</td>
-            <td><span class="tag tag--remote">Firebase</span></td>
-          </tr>
-          <tr>
-            <td>Advertising ID &amp; device info</td>
-            <td>Google servers</td>
-            <td><span class="tag tag--remote">AdMob</span></td>
-          </tr>
-          <tr>
-            <td>IP address (font loading)</td>
-            <td>Google Fonts CDN</td>
-            <td><span class="tag tag--remote">Google Fonts</span></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <!-- 4. Permissions -->
-    <div class="content-card animate-in delay-4">
-      <h2>4. Permissions</h2>
-
-      <h3>Android</h3>
-      <table class="data-table">
-        <thead>
-          <tr><th>Permission</th><th>Purpose</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>CAMERA</td><td>Real-time hand tracking for exercises</td></tr>
-          <tr><td>RECEIVE_BOOT_COMPLETED</td><td>Restore scheduled reminders after reboot</td></tr>
-          <tr><td>SCHEDULE_EXACT_ALARM</td><td>Schedule exercise reminders at exact times</td></tr>
-          <tr><td>USE_EXACT_ALARM</td><td>Exact alarm support for Android 12+</td></tr>
-          <tr><td>POST_NOTIFICATIONS</td><td>Display reminder notifications (Android 13+)</td></tr>
-        </tbody>
-      </table>
-
-      <h3>iOS</h3>
-      <table class="data-table">
-        <thead>
-          <tr><th>Permission</th><th>Purpose</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>Camera (NSCameraUsageDescription)</td><td>Hand tracking for exercises</td></tr>
-          <tr><td>App Tracking Transparency (NSUserTrackingUsageDescription)</td><td>Personalized ad delivery</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <!-- 5. Third-Party Services -->
-    <div class="content-card animate-in delay-5">
-      <h2>5. Third-Party Services</h2>
-      <p>The App uses the following third-party services that may collect data:</p>
-      <table class="data-table">
-        <thead>
-          <tr><th>Service</th><th>Provider</th><th>Purpose</th><th>Privacy Policy</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Firebase Analytics</td>
-            <td>Google LLC</td>
-            <td>App usage analytics</td>
-            <td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener" style="color:var(--cyan-400);">Link</a></td>
-          </tr>
-          <tr>
-            <td>Google AdMob</td>
-            <td>Google LLC</td>
-            <td>In-app advertising</td>
-            <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener" style="color:var(--cyan-400);">Link</a></td>
-          </tr>
-          <tr>
-            <td>Google Fonts</td>
-            <td>Google LLC</td>
-            <td>Typography</td>
-            <td><a href="https://developers.google.com/fonts/faq/privacy" target="_blank" rel="noopener" style="color:var(--cyan-400);">Link</a></td>
-          </tr>
-          <tr>
-            <td>MediaPipe</td>
-            <td>Google LLC</td>
-            <td>On-device hand tracking</td>
-            <td><a href="https://developers.google.com/mediapipe" target="_blank" rel="noopener" style="color:var(--cyan-400);">Link</a></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <!-- 6. Ads -->
-    <div class="content-card animate-in delay-5">
-      <h2>6. Advertising</h2>
-      <p>
-        The App displays the following ad formats through Google AdMob:
-      </p>
-      <ul>
-        <li><span class="highlight">Banner Ads</span> — displayed at the bottom of certain screens</li>
-        <li><span class="highlight">Interstitial Ads</span> — full-screen ads, limited to once per session</li>
-        <li><span class="highlight">App Open Ads</span> — shown when the app is launched or resumed, with a 30-second minimum interval</li>
-      </ul>
-      <p>
-        You can opt out of personalized advertising through your device settings:
-      </p>
-      <ul>
-        <li><strong>Android:</strong> Settings → Google → Ads → Opt out of Ads Personalization</li>
-        <li><strong>iOS:</strong> Settings → Privacy → Tracking → disable tracking for FlexZen Motio</li>
+        <li>수집 항목: 기기 모델, OS 버전, 앱 버전, 화면 조회 이벤트, 세션 시간</li>
+        <li>개인 식별: 불가 (익명 집계 데이터)</li>
+        <li>정책: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase 개인정보처리방침</a></li>
       </ul>
     </div>
 
-    <!-- 7. Data Retention -->
-    <div class="content-card animate-in delay-6">
-      <h2>7. Data Retention &amp; Deletion</h2>
-      <p>
-        All exercise data and app settings are stored locally on your device. You can delete this data at any time by:
-      </p>
+    <div class="card">
+      <div class="card-title">Google AdMob (광고)</div>
+      <p>본 앱은 Google AdMob을 통해 광고를 게재하며, 다음 유형의 광고가 포함됩니다.</p>
       <ul>
-        <li>Clearing the app's data through your device settings</li>
-        <li>Uninstalling the App</li>
+        <li><strong>배너 광고 (Banner)</strong> — 대시보드 및 캘린더 하단에 상시 표시</li>
+        <li><strong>전면 광고 (Interstitial)</strong> — 타이머 정지 후 또는 목차 선택 완료 후 일정 빈도로 표시</li>
+        <li><strong>앱 오픈 광고 (App Open)</strong> — 앱이 백그라운드에서 포그라운드로 전환될 때 조건부 표시</li>
       </ul>
-      <p>
-        Data collected by third-party services (Firebase Analytics, AdMob) is subject to their respective
-        retention policies.
-      </p>
-    </div>
-
-    <!-- 8. Children -->
-    <div class="content-card animate-in delay-6">
-      <h2>8. Children's Privacy</h2>
-      <p>
-        The App is not directed at children under the age of 13. We do not knowingly collect personal
-        information from children. If you believe a child has provided us with personal data,
-        please contact us so we can take appropriate action.
-      </p>
-    </div>
-
-    <!-- 9. Security -->
-    <div class="content-card animate-in delay-7">
-      <h2>9. Data Security</h2>
-      <p>
-        We value the security of your data. The App does not operate any external servers
-        and does not require user accounts or login. All personal exercise data remains on your
-        device. However, no method of electronic storage is 100% secure, and we cannot
-        guarantee absolute security.
-      </p>
-    </div>
-
-    <!-- 10. Changes -->
-    <div class="content-card animate-in delay-7">
-      <h2>10. Changes to This Policy</h2>
-      <p>
-        We may update this Privacy Policy from time to time. Any changes will be posted on this page
-        with an updated effective date. We encourage you to review this page periodically.
-      </p>
-    </div>
-
-    <!-- 11. Contact -->
-    <div class="content-card animate-in delay-8">
-      <h2>11. Contact Us</h2>
-      <p>
-        If you have any questions or concerns about this Privacy Policy or our data practices,
-        please contact us:
-      </p>
+      <p>AdMob은 맞춤형 광고 제공을 위해 광고 ID, 기기 정보, 대략적인 위치 정보를 수집할 수 있습니다.</p>
       <ul>
-        <li><span class="highlight">Company:</span> Motio Works</li>
-        <li><span class="highlight">Email:</span> <a href="mailto:motioworks@gmail.com" style="color:var(--cyan-400);">motioworks@gmail.com</a></li>
+        <li>정책: <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google 광고 개인정보처리방침</a></li>
       </ul>
     </div>
 
-    <!-- ─── Footer ─── -->
-    <footer class="animate-in delay-8">
-      <p>
-        &copy; 2026 Motio Works. All rights reserved.<br>
-        <a href="../index.html">Back to Home</a> &middot;
-        <a href="mailto:motioworks@gmail.com">motioworks@gmail.com</a>
+    <div class="card">
+      <div class="card-title">Google Play 결제 (인앱결제)</div>
+      <p>본 앱은 "집중 부스터" 소모성 아이템을 Google Play 결제를 통해 판매합니다.</p>
+      <ul>
+        <li>결제 처리: Google Play에서 직접 처리하며, 개발자는 카드 번호 등 결제 수단 정보를 수집하지 않습니다</li>
+        <li>개발자가 수신하는 정보: 주문 ID, 구매 상품명, 구매 시각, 결제 상태</li>
+        <li>정책: <a href="https://payments.google.com/payments/apis-secure/u/0/get_legal_document?ldo=0&ldt=privacynotice" target="_blank" rel="noopener">Google Payments 개인정보처리방침</a></li>
+      </ul>
+    </div>
+
+    <h3>2.3 네트워크 통신 <span class="badge badge-server">서버 통신</span></h3>
+    <table>
+      <thead>
+        <tr><th>기능</th><th>통신 대상</th><th>전송 데이터</th><th>목적</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>ISBN 검색</td>
+          <td>외부 도서 정보 API</td>
+          <td>ISBN 번호</td>
+          <td>교재 정보(제목, 저자, 페이지 수) 자동 입력</td>
+        </tr>
+        <tr>
+          <td>목차(TOC) 검색</td>
+          <td>Google Cloud Firestore</td>
+          <td>ISBN 번호</td>
+          <td>교재 목차 데이터 조회 및 적용</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="highlight">
+      위 네트워크 통신에서 이용자의 개인정보(이름, 이메일, 전화번호 등)는 일절 전송되지 않습니다.
+      오직 교재 식별을 위한 ISBN 번호만 전송됩니다.
+    </div>
+
+    <!-- ─── 3. 정보 이용 목적 ─── -->
+    <h2>3. 정보 이용 목적</h2>
+    <ol>
+      <li>학습 계획 수립, 회독 일정 관리 및 순공시간 측정 (핵심 서비스 제공)</li>
+      <li>앱 성능 분석 및 서비스 품질 개선 (Firebase Analytics)</li>
+      <li>광고 게재를 통한 무료 서비스 유지 (Google AdMob)</li>
+      <li>인앱결제 상품(집중 부스터) 구매 처리 및 상태 관리</li>
+      <li>교재 정보 자동 입력 및 목차 데이터 제공 (ISBN/TOC 검색)</li>
+    </ol>
+
+    <!-- ─── 4. 정보 공유 ─── -->
+    <h2>4. 정보 공유 및 제3자 제공</h2>
+    <p>개발자는 이용자의 개인정보를 제3자에게 판매하거나 임대하지 않습니다. 다만, 다음의 경우에 한해 정보가 처리될 수 있습니다.</p>
+    <table>
+      <thead>
+        <tr><th>서드파티</th><th>목적</th><th>처리 데이터</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Google (Firebase Analytics)</td><td>앱 사용 분석</td><td>익명 사용 통계</td></tr>
+        <tr><td>Google (AdMob)</td><td>광고 게재</td><td>광고 ID, 기기 정보</td></tr>
+        <tr><td>Google (Play Billing)</td><td>결제 처리</td><td>주문 정보</td></tr>
+      </tbody>
+    </table>
+
+    <!-- ─── 5. GDPR ─── -->
+    <h2>5. EU/EEA 이용자 권리 (GDPR)</h2>
+    <p>유럽 경제 지역(EEA), 영국 또는 스위스에 거주하는 이용자는 다음의 권리를 가집니다.</p>
+    <ul>
+      <li><strong>동의 관리</strong> — 앱 최초 실행 시 GDPR 동의 화면(Google UMP)이 표시됩니다. 맞춤형 광고 동의, 비맞춤 광고만 허용, 또는 광고 거부를 선택할 수 있습니다.</li>
+      <li><strong>동의 철회</strong> — 앱 내 설정(Settings) → "개인정보 설정" 버튼을 통해 언제든지 동의를 변경하거나 철회할 수 있습니다.</li>
+      <li><strong>데이터 삭제</strong> — 앱을 삭제하면 기기 내 모든 학습 데이터가 즉시 삭제됩니다. Firebase Analytics의 익명 데이터는 Google 보존 정책에 따라 자동 만료됩니다.</li>
+      <li><strong>접근 및 이동</strong> — 기기 내 저장된 데이터는 이용자 본인만 접근 가능합니다.</li>
+    </ul>
+
+    <!-- ─── 6. 데이터 보관 ─── -->
+    <h2>6. 데이터 보관 및 삭제</h2>
+    <table>
+      <thead>
+        <tr><th>데이터 유형</th><th>보관 기간</th><th>삭제 방법</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>기기 내 학습 데이터</td><td>앱 삭제 시까지</td><td>앱 삭제 또는 앱 데이터 초기화</td></tr>
+        <tr><td>Firebase Analytics</td><td>Google 정책 (최대 14개월)</td><td>자동 만료</td></tr>
+        <tr><td>AdMob 광고 데이터</td><td>Google 광고 정책 준수</td><td>광고 ID 재설정 (기기 설정)</td></tr>
+        <tr><td>Google Play 결제 기록</td><td>Google 정책 (법적 보관 의무)</td><td>Google Play 고객센터 문의</td></tr>
+      </tbody>
+    </table>
+
+    <!-- ─── 7. 광고 ─── -->
+    <h2>7. 광고 및 집중 부스터</h2>
+    <p>본 앱은 무료로 제공되며, 광고 수익으로 운영됩니다.</p>
+    <h3>7.1 광고 유형</h3>
+    <ul>
+      <li><strong>배너 광고</strong> — 대시보드 및 캘린더 화면 하단에 표시됩니다.</li>
+      <li><strong>전면 광고</strong> — 타이머 정지 후 또는 목차 선택 완료 시, 일정 빈도(3회 이벤트마다 1회)로 표시됩니다. 학습(Focus/Break) 진행 중에는 절대 표시되지 않습니다.</li>
+      <li><strong>앱 오픈 광고</strong> — 앱이 백그라운드에서 돌아올 때 표시됩니다. 타이머 진행 중이거나 잠깐 전환했을 때는 표시되지 않습니다.</li>
+    </ul>
+
+    <h3>7.2 집중 부스터 (인앱결제)</h3>
+    <p>"집중 부스터"를 구매하면 구매 기간 동안 모든 광고가 제거됩니다.</p>
+    <table>
+      <thead>
+        <tr><th>상품</th><th>기간</th><th>가격 (KRW)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>집중 부스터 1일</td><td>24시간</td><td>₩100</td></tr>
+        <tr><td>집중 부스터 7일</td><td>7일</td><td>₩500</td></tr>
+        <tr><td>집중 부스터 1개월</td><td>30일</td><td>₩1,500</td></tr>
+      </tbody>
+    </table>
+    <div class="highlight">
+      집중 부스터는 소모성 아이템이며, 구매 즉시 사용이 시작됩니다.
+      이미 활성화된 부스터가 있는 경우 추가 구매가 제한됩니다.
+      환불은 Google Play의 환불 정책에 따릅니다.
+    </div>
+
+    <!-- ─── 8. 아동 ─── -->
+    <h2>8. 아동 개인정보 보호</h2>
+    <p>
+      본 앱은 만 13세 이상의 이용자를 대상으로 합니다.
+      개발자는 의도적으로 13세 미만 아동의 개인정보를 수집하지 않습니다.
+      만약 13세 미만 아동의 정보가 수집된 것을 인지할 경우, 즉시 해당 데이터를 삭제합니다.
+    </p>
+
+    <!-- ─── 9. 보안 ─── -->
+    <h2>9. 보안</h2>
+    <p>
+      개발자는 이용자의 정보를 보호하기 위해 합리적인 기술적·관리적 조치를 취합니다.
+      그러나 인터넷을 통한 데이터 전송이나 전자적 저장 방법이 100% 안전하지 않으므로,
+      절대적인 보안을 보장하기는 어렵습니다.
+    </p>
+
+    <!-- ─── 10. 변경 ─── -->
+    <h2>10. 방침 변경</h2>
+    <p>
+      본 개인정보처리방침은 서비스 변경 또는 관련 법규 개정에 따라 수정될 수 있습니다.
+      변경 사항이 있을 경우 본 페이지에 게시하며, 중요한 변경의 경우 앱 내 공지를 통해 안내합니다.
+      변경 후 앱을 계속 사용하면 변경된 방침에 동의한 것으로 간주됩니다.
+    </p>
+
+    <!-- ─── 11. 연락처 ─── -->
+    <h2>11. 연락처</h2>
+    <p>개인정보 관련 문의, 권리 행사 요청, 또는 기타 질문이 있으시면 아래로 연락해 주십시오.</p>
+    <div class="card">
+      <div class="card-title">개발자 정보</div>
+      <ul>
+        <li><strong>개발자</strong>: Motio Works</li>
+        <li><strong>이메일</strong>: <a href="mailto:motiowork@gmail.com">motiowork@gmail.com</a></li>
+        <li><strong>웹사이트</strong>: <a href="https://motiowork.github.io/web/" target="_blank" rel="noopener">https://motiowork.github.io/web/</a></li>
+      </ul>
+    </div>
+
+    <footer>
+      <p>&copy; 2026 Motio Works. All rights reserved.</p>
+      <p style="margin-top: 8px;">
+        <a href="https://motiowork.github.io/web/">홈으로 돌아가기</a>
       </p>
     </footer>
 
   </div>
-
 </body>
 </html>
