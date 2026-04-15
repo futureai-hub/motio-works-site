@@ -1,11 +1,11 @@
-# Motio Works — Developer Site
+# Motio Work — Developer Site
 
-Motio Works의 통합 개발자 사이트입니다. GitHub Pages로 호스팅됩니다.
+Motio Work의 통합 개발자 사이트입니다. GitHub Pages로 호스팅됩니다.
 
 ## 구조
 
 ```
-motio-works-site/
+motio-work-site/
 ├── index.html                          ← 개발자 랜딩 페이지
 ├── app-ads.txt                         ← AdMob 광고 인증 (전체 앱 공통)
 ├── README.md                           ← 이 파일
@@ -30,6 +30,6 @@ motio-works-site/
 - [ ] GitHub에 push
 - [ ] Settings → Pages → Source: main branch 활성화
 - [ ] Google Play Console에 URL 설정:
-  - 개발자 웹사이트: `https://<username>.github.io/motio-works-site/`
-  - 개인정보처리방침: `https://<username>.github.io/motio-works-site/flexzen-motio/privacy-policy.html`
+  - 개발자 웹사이트: `https://<username>.github.io/motio-work-site/`
+  - 개인정보처리방침: `https://<username>.github.io/motio-work-site/flexzen-motio/privacy-policy.html`
 - [ ] AdMob 콘솔에서 app-ads.txt 크롤링 상태 확인

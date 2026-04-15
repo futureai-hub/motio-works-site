@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privacy Policy — FlexZen Motio</title>
-  <meta name="description" content="Privacy Policy for FlexZen Motio, a camera-based hand exercise app by Motio Works.">
+  <meta name="description" content="Privacy Policy for FlexZen Motio, a camera-based hand exercise app by Motio Work.">
   <link rel="icon" type="image/png" href="../logo.png">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
   <style>
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
     :root {
       --bg-primary: #0a0a0f;
@@ -23,11 +31,13 @@
       --text-secondary: #94A3B8;
       --text-muted: #64748B;
       --gradient-main: linear-gradient(135deg, #6C3AED 0%, #06B6D4 100%);
-      --border-subtle: rgba(255,255,255,0.06);
+      --border-subtle: rgba(255, 255, 255, 0.06);
       --radius-lg: 20px;
     }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -38,14 +48,18 @@
     }
 
     .ambient-bg {
-      position: fixed; inset: 0; z-index: 0; pointer-events: none;
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
       background:
-        radial-gradient(ellipse 600px 400px at 15% 10%, rgba(108,58,237,0.06) 0%, transparent 70%),
-        radial-gradient(ellipse 500px 350px at 85% 90%, rgba(6,182,212,0.04) 0%, transparent 70%);
+        radial-gradient(ellipse 600px 400px at 15% 10%, rgba(108, 58, 237, 0.06) 0%, transparent 70%),
+        radial-gradient(ellipse 500px 350px at 85% 90%, rgba(6, 182, 212, 0.04) 0%, transparent 70%);
     }
 
     .wrapper {
-      position: relative; z-index: 1;
+      position: relative;
+      z-index: 1;
       max-width: 760px;
       margin: 0 auto;
       padding: 0 24px;
@@ -67,8 +81,15 @@
       margin-bottom: 24px;
       transition: color 0.2s;
     }
-    .back-link:hover { color: var(--purple-300); }
-    .back-link svg { width: 14px; height: 14px; }
+
+    .back-link:hover {
+      color: var(--purple-300);
+    }
+
+    .back-link svg {
+      width: 14px;
+      height: 14px;
+    }
 
     .page-header h1 {
       font-size: 28px;
@@ -124,7 +145,9 @@
       line-height: 1.8;
     }
 
-    .content-card li { margin-bottom: 4px; }
+    .content-card li {
+      margin-bottom: 4px;
+    }
 
     .highlight {
       color: var(--text-primary);
@@ -151,7 +174,7 @@
       font-size: 11px;
       text-transform: uppercase;
       letter-spacing: 0.8px;
-      background: rgba(108,58,237,0.06);
+      background: rgba(108, 58, 237, 0.06);
     }
 
     .data-table td {
@@ -167,17 +190,17 @@
     }
 
     .tag--local {
-      background: rgba(34,211,238,0.1);
+      background: rgba(34, 211, 238, 0.1);
       color: var(--cyan-400);
     }
 
     .tag--remote {
-      background: rgba(251,191,36,0.1);
+      background: rgba(251, 191, 36, 0.1);
       color: #FBBF24;
     }
 
     .tag--none {
-      background: rgba(74,222,128,0.1);
+      background: rgba(74, 222, 128, 0.1);
       color: #4ADE80;
     }
 
@@ -200,33 +223,81 @@
       text-decoration: none;
       transition: color 0.2s;
     }
-    footer a:hover { color: var(--purple-300); }
+
+    footer a:hover {
+      color: var(--purple-300);
+    }
 
     @media (max-width: 640px) {
-      .content-card { padding: 24px 20px; }
-      .page-header h1 { font-size: 22px; }
-      .data-table { font-size: 12px; }
-      .data-table th, .data-table td { padding: 8px 10px; }
+      .content-card {
+        padding: 24px 20px;
+      }
+
+      .page-header h1 {
+        font-size: 22px;
+      }
+
+      .data-table {
+        font-size: 12px;
+      }
+
+      .data-table th,
+      .data-table td {
+        padding: 8px 10px;
+      }
     }
 
     @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(12px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(12px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
+
     .animate-in {
       animation: fadeUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
       opacity: 0;
     }
-    .delay-1 { animation-delay: 0.08s; }
-    .delay-2 { animation-delay: 0.16s; }
-    .delay-3 { animation-delay: 0.24s; }
-    .delay-4 { animation-delay: 0.32s; }
-    .delay-5 { animation-delay: 0.40s; }
-    .delay-6 { animation-delay: 0.48s; }
-    .delay-7 { animation-delay: 0.56s; }
-    .delay-8 { animation-delay: 0.64s; }
+
+    .delay-1 {
+      animation-delay: 0.08s;
+    }
+
+    .delay-2 {
+      animation-delay: 0.16s;
+    }
+
+    .delay-3 {
+      animation-delay: 0.24s;
+    }
+
+    .delay-4 {
+      animation-delay: 0.32s;
+    }
+
+    .delay-5 {
+      animation-delay: 0.40s;
+    }
+
+    .delay-6 {
+      animation-delay: 0.48s;
+    }
+
+    .delay-7 {
+      animation-delay: 0.56s;
+    }
+
+    .delay-8 {
+      animation-delay: 0.64s;
+    }
   </style>
 </head>
+
 <body>
 
   <div class="ambient-bg"></div>
@@ -236,8 +307,11 @@
     <!-- ─── Header ─── -->
     <div class="page-header animate-in">
       <a href="../index.html" class="back-link">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
-        Back to Motio Works
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6" />
+        </svg>
+        Back to Motio Work
       </a>
       <h1>Privacy Policy</h1>
       <p class="effective-date">FlexZen Motio &middot; Effective Date: March 17, 2026</p>
@@ -247,9 +321,12 @@
     <div class="content-card animate-in delay-1">
       <h2>1. Introduction</h2>
       <p>
-        Motio Works ("<span class="highlight">we</span>," "<span class="highlight">us</span>," or "<span class="highlight">our</span>")
-        operates the <span class="highlight">FlexZen Motio</span> mobile application (the "<span class="highlight">App</span>").
-        This Privacy Policy explains how we collect, use, and protect your information when you use our App on Android and iOS devices.
+        Motio Work ("<span class="highlight">we</span>," "<span class="highlight">us</span>," or "<span
+          class="highlight">our</span>")
+        operates the <span class="highlight">FlexZen Motio</span> mobile application (the "<span
+          class="highlight">App</span>").
+        This Privacy Policy explains how we collect, use, and protect your information when you use our App on Android
+        and iOS devices.
       </p>
       <p>
         By using the App, you agree to the collection and use of information as described in this policy.
@@ -264,7 +341,8 @@
       <h3>2.1 Camera Data (On-Device Only)</h3>
       <p>
         The App uses your device camera to perform <span class="highlight">real-time hand tracking</span> using
-        Google's MediaPipe technology. All camera processing occurs <span class="highlight">entirely on your device</span>.
+        Google's MediaPipe technology. All camera processing occurs <span class="highlight">entirely on your
+          device</span>.
         We do <span class="highlight">not</span> capture, store, record, or transmit any images, video, or camera data
         to any server.
       </p>
@@ -298,7 +376,8 @@
       </ul>
       <p>
         This data is collected in aggregate and does not personally identify you. For more information,
-        see <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" style="color:var(--cyan-400);">Google's Privacy Policy</a>.
+        see <a href="https://policies.google.com/privacy" target="_blank" rel="noopener"
+          style="color:var(--cyan-400);">Google's Privacy Policy</a>.
       </p>
 
       <h3>2.4 Advertising Data</h3>
@@ -371,25 +450,52 @@
       <h3>Android</h3>
       <table class="data-table">
         <thead>
-          <tr><th>Permission</th><th>Purpose</th></tr>
+          <tr>
+            <th>Permission</th>
+            <th>Purpose</th>
+          </tr>
         </thead>
         <tbody>
-          <tr><td>CAMERA</td><td>Real-time hand tracking for exercises</td></tr>
-          <tr><td>RECEIVE_BOOT_COMPLETED</td><td>Restore scheduled reminders after reboot</td></tr>
-          <tr><td>SCHEDULE_EXACT_ALARM</td><td>Schedule exercise reminders at exact times</td></tr>
-          <tr><td>USE_EXACT_ALARM</td><td>Exact alarm support for Android 12+</td></tr>
-          <tr><td>POST_NOTIFICATIONS</td><td>Display reminder notifications (Android 13+)</td></tr>
+          <tr>
+            <td>CAMERA</td>
+            <td>Real-time hand tracking for exercises</td>
+          </tr>
+          <tr>
+            <td>RECEIVE_BOOT_COMPLETED</td>
+            <td>Restore scheduled reminders after reboot</td>
+          </tr>
+          <tr>
+            <td>SCHEDULE_EXACT_ALARM</td>
+            <td>Schedule exercise reminders at exact times</td>
+          </tr>
+          <tr>
+            <td>USE_EXACT_ALARM</td>
+            <td>Exact alarm support for Android 12+</td>
+          </tr>
+          <tr>
+            <td>POST_NOTIFICATIONS</td>
+            <td>Display reminder notifications (Android 13+)</td>
+          </tr>
         </tbody>
       </table>
 
       <h3>iOS</h3>
       <table class="data-table">
         <thead>
-          <tr><th>Permission</th><th>Purpose</th></tr>
+          <tr>
+            <th>Permission</th>
+            <th>Purpose</th>
+          </tr>
         </thead>
         <tbody>
-          <tr><td>Camera (NSCameraUsageDescription)</td><td>Hand tracking for exercises</td></tr>
-          <tr><td>App Tracking Transparency (NSUserTrackingUsageDescription)</td><td>Personalized ad delivery</td></tr>
+          <tr>
+            <td>Camera (NSCameraUsageDescription)</td>
+            <td>Hand tracking for exercises</td>
+          </tr>
+          <tr>
+            <td>App Tracking Transparency (NSUserTrackingUsageDescription)</td>
+            <td>Personalized ad delivery</td>
+          </tr>
         </tbody>
       </table>
     </div>
@@ -400,32 +506,41 @@
       <p>The App uses the following third-party services that may collect data:</p>
       <table class="data-table">
         <thead>
-          <tr><th>Service</th><th>Provider</th><th>Purpose</th><th>Privacy Policy</th></tr>
+          <tr>
+            <th>Service</th>
+            <th>Provider</th>
+            <th>Purpose</th>
+            <th>Privacy Policy</th>
+          </tr>
         </thead>
         <tbody>
           <tr>
             <td>Firebase Analytics</td>
             <td>Google LLC</td>
             <td>App usage analytics</td>
-            <td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener" style="color:var(--cyan-400);">Link</a></td>
+            <td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener"
+                style="color:var(--cyan-400);">Link</a></td>
           </tr>
           <tr>
             <td>Google AdMob</td>
             <td>Google LLC</td>
             <td>In-app advertising</td>
-            <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener" style="color:var(--cyan-400);">Link</a></td>
+            <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener"
+                style="color:var(--cyan-400);">Link</a></td>
           </tr>
           <tr>
             <td>Google Fonts</td>
             <td>Google LLC</td>
             <td>Typography</td>
-            <td><a href="https://developers.google.com/fonts/faq/privacy" target="_blank" rel="noopener" style="color:var(--cyan-400);">Link</a></td>
+            <td><a href="https://developers.google.com/fonts/faq/privacy" target="_blank" rel="noopener"
+                style="color:var(--cyan-400);">Link</a></td>
           </tr>
           <tr>
             <td>MediaPipe</td>
             <td>Google LLC</td>
             <td>On-device hand tracking</td>
-            <td><a href="https://developers.google.com/mediapipe" target="_blank" rel="noopener" style="color:var(--cyan-400);">Link</a></td>
+            <td><a href="https://developers.google.com/mediapipe" target="_blank" rel="noopener"
+                style="color:var(--cyan-400);">Link</a></td>
           </tr>
         </tbody>
       </table>
@@ -440,7 +555,8 @@
       <ul>
         <li><span class="highlight">Banner Ads</span> — displayed at the bottom of certain screens</li>
         <li><span class="highlight">Interstitial Ads</span> — full-screen ads, limited to once per session</li>
-        <li><span class="highlight">App Open Ads</span> — shown when the app is launched or resumed, with a 30-second minimum interval</li>
+        <li><span class="highlight">App Open Ads</span> — shown when the app is launched or resumed, with a 30-second
+          minimum interval</li>
       </ul>
       <p>
         You can opt out of personalized advertising through your device settings:
@@ -505,21 +621,23 @@
         please contact us:
       </p>
       <ul>
-        <li><span class="highlight">Company:</span> Motio Works</li>
-        <li><span class="highlight">Email:</span> <a href="mailto:motioworks@gmail.com" style="color:var(--cyan-400);">motioworks@gmail.com</a></li>
+        <li><span class="highlight">Company:</span> Motio Work</li>
+        <li><span class="highlight">Email:</span> <a href="mailto:motiowork@gmail.com"
+            style="color:var(--cyan-400);">motiowork@gmail.com</a></li>
       </ul>
     </div>
 
     <!-- ─── Footer ─── -->
     <footer class="animate-in delay-8">
       <p>
-        &copy; 2026 Motio Works. All rights reserved.<br>
+        &copy; 2026 Motio Work. All rights reserved.<br>
         <a href="../index.html">Back to Home</a> &middot;
-        <a href="mailto:motioworks@gmail.com">motioworks@gmail.com</a>
+        <a href="mailto:motiowork@gmail.com">motiowork@gmail.com</a>
       </p>
     </footer>
 
   </div>
 
 </body>
+
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,7 +21,11 @@
       --radius: 12px;
     }
 
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
     body {
       font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -79,9 +84,12 @@
       margin: 24px 0 12px;
     }
 
-    p { margin-bottom: 12px; }
+    p {
+      margin-bottom: 12px;
+    }
 
-    ul, ol {
+    ul,
+    ol {
       margin: 8px 0 16px 20px;
     }
 
@@ -122,7 +130,8 @@
       font-size: 14px;
     }
 
-    th, td {
+    th,
+    td {
       padding: 10px 12px;
       text-align: left;
       border-bottom: 1px solid var(--border);
@@ -157,9 +166,20 @@
       font-weight: 500;
     }
 
-    .badge-local { background: #1e3a2f; color: #6ee7b7; }
-    .badge-server { background: #1e293b; color: #93c5fd; }
-    .badge-third { background: #2d1b4e; color: #c4b5fd; }
+    .badge-local {
+      background: #1e3a2f;
+      color: #6ee7b7;
+    }
+
+    .badge-server {
+      background: #1e293b;
+      color: #93c5fd;
+    }
+
+    .badge-third {
+      background: #2d1b4e;
+      color: #c4b5fd;
+    }
 
     footer {
       margin-top: 60px;
@@ -171,14 +191,30 @@
     }
 
     @media (max-width: 600px) {
-      .container { padding: 32px 16px 60px; }
-      header h1 { font-size: 22px; }
-      h2 { font-size: 18px; }
-      table { font-size: 13px; }
-      th, td { padding: 8px; }
+      .container {
+        padding: 32px 16px 60px;
+      }
+
+      header h1 {
+        font-size: 22px;
+      }
+
+      h2 {
+        font-size: 18px;
+      }
+
+      table {
+        font-size: 13px;
+      }
+
+      th,
+      td {
+        padding: 8px;
+      }
     }
   </style>
 </head>
+
 <body>
   <div class="container">
 
@@ -191,7 +227,7 @@
     <!-- ─── 1. 개요 ─── -->
     <h2>1. 개요</h2>
     <p>
-      Motio Works(이하 "개발자")는 <strong>Iteration - N회독 플래너</strong>(이하 "본 앱")를 제공하며,
+      Motio Work(이하 "개발자")는 <strong>Iteration - N회독 플래너</strong>(이하 "본 앱")를 제공하며,
       이용자의 개인정보를 소중히 여깁니다. 본 개인정보처리방침은 본 앱이 어떤 정보를 수집·이용·보관·공유하는지,
       그리고 이용자가 자신의 정보에 대해 어떤 권리를 행사할 수 있는지를 설명합니다.
     </p>
@@ -207,17 +243,53 @@
     <p>아래 데이터는 이용자의 기기에만 저장되며, 외부 서버로 전송되지 않습니다.</p>
     <table>
       <thead>
-        <tr><th>데이터</th><th>목적</th><th>저장 위치</th></tr>
+        <tr>
+          <th>데이터</th>
+          <th>목적</th>
+          <th>저장 위치</th>
+        </tr>
       </thead>
       <tbody>
-        <tr><td>과목·교재 정보</td><td>학습 계획 관리</td><td>SQLite (기기 내부)</td></tr>
-        <tr><td>회독(Iteration) 일정</td><td>반복 학습 스케줄링</td><td>SQLite (기기 내부)</td></tr>
-        <tr><td>학습 기록 (날짜, 시간, 페이지)</td><td>순공시간 측정 및 통계</td><td>SQLite (기기 내부)</td></tr>
-        <tr><td>타이머 설정 (Focus/Break 시간)</td><td>개인화된 타이머 운영</td><td>SharedPreferences</td></tr>
-        <tr><td>집중 부스터 상태 (만료일)</td><td>인앱결제 상품 활성 여부 확인</td><td>SharedPreferences</td></tr>
-        <tr><td>광고 동의 상태 (GDPR)</td><td>EU/EEA 사용자 광고 동의 기록</td><td>SharedPreferences (UMP SDK 관리)</td></tr>
-        <tr><td>전면 광고 표시 카운터</td><td>광고 빈도 제한 (3회 이벤트마다 1회)</td><td>앱 메모리 (비영구)</td></tr>
-        <tr><td>앱 설정 (테마, 언어 등)</td><td>사용자 환경 유지</td><td>SharedPreferences</td></tr>
+        <tr>
+          <td>과목·교재 정보</td>
+          <td>학습 계획 관리</td>
+          <td>SQLite (기기 내부)</td>
+        </tr>
+        <tr>
+          <td>회독(Iteration) 일정</td>
+          <td>반복 학습 스케줄링</td>
+          <td>SQLite (기기 내부)</td>
+        </tr>
+        <tr>
+          <td>학습 기록 (날짜, 시간, 페이지)</td>
+          <td>순공시간 측정 및 통계</td>
+          <td>SQLite (기기 내부)</td>
+        </tr>
+        <tr>
+          <td>타이머 설정 (Focus/Break 시간)</td>
+          <td>개인화된 타이머 운영</td>
+          <td>SharedPreferences</td>
+        </tr>
+        <tr>
+          <td>집중 부스터 상태 (만료일)</td>
+          <td>인앱결제 상품 활성 여부 확인</td>
+          <td>SharedPreferences</td>
+        </tr>
+        <tr>
+          <td>광고 동의 상태 (GDPR)</td>
+          <td>EU/EEA 사용자 광고 동의 기록</td>
+          <td>SharedPreferences (UMP SDK 관리)</td>
+        </tr>
+        <tr>
+          <td>전면 광고 표시 카운터</td>
+          <td>광고 빈도 제한 (3회 이벤트마다 1회)</td>
+          <td>앱 메모리 (비영구)</td>
+        </tr>
+        <tr>
+          <td>앱 설정 (테마, 언어 등)</td>
+          <td>사용자 환경 유지</td>
+          <td>SharedPreferences</td>
+        </tr>
       </tbody>
     </table>
 
@@ -230,7 +302,8 @@
       <ul>
         <li>수집 항목: 기기 모델, OS 버전, 앱 버전, 화면 조회 이벤트, 세션 시간</li>
         <li>개인 식별: 불가 (익명 집계 데이터)</li>
-        <li>정책: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase 개인정보처리방침</a></li>
+        <li>정책: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase
+            개인정보처리방침</a></li>
       </ul>
     </div>
 
@@ -239,12 +312,16 @@
       <p>본 앱은 Google AdMob을 통해 광고를 게재하며, 다음 유형의 광고가 포함됩니다.</p>
       <ul>
         <li><strong>배너 광고 (Banner)</strong> — 대시보드 및 캘린더 화면 하단에 상시 표시됩니다. 화면 너비에 맞게 자동 조절됩니다.</li>
-        <li><strong>전면 광고 (Interstitial)</strong> — 타이머 종료 후 공부기록 저장 시, 또는 교재 목차 선택 완료 시 일정 빈도(3회 이벤트마다 1회)로 표시됩니다. <em>학습(집중/휴식) 진행 중에는 절대 표시되지 않습니다.</em></li>
-        <li><strong>앱 오픈 광고 (App Open)</strong> — 앱이 백그라운드에서 포그라운드로 전환될 때, 다음 조건을 모두 충족하는 경우에만 표시됩니다: ①타이머가 비활성 상태, ②마지막 표시 후 5분 이상 경과, ③집중 부스터 비활성, ④백그라운드 체류 5초 이상.</li>
+        <li><strong>전면 광고 (Interstitial)</strong> — 타이머 종료 후 공부기록 저장 시, 또는 교재 목차 선택 완료 시 일정 빈도(3회 이벤트마다 1회)로 표시됩니다.
+          <em>학습(집중/휴식) 진행 중에는 절대 표시되지 않습니다.</em></li>
+        <li><strong>앱 오픈 광고 (App Open)</strong> — 앱이 백그라운드에서 포그라운드로 전환될 때, 다음 조건을 모두 충족하는 경우에만 표시됩니다: ①타이머가 비활성 상태, ②마지막
+          표시 후 5분 이상 경과, ③집중 부스터 비활성, ④백그라운드 체류 5초 이상.</li>
       </ul>
-      <p>AdMob은 맞춤형 광고 제공을 위해 광고 ID(GAID), 기기 정보, 대략적인 위치 정보를 수집할 수 있습니다. EU/EEA 사용자가 맞춤형 광고에 동의하지 않은 경우, 비맞춤형 광고가 대신 게재됩니다.</p>
+      <p>AdMob은 맞춤형 광고 제공을 위해 광고 ID(GAID), 기기 정보, 대략적인 위치 정보를 수집할 수 있습니다. EU/EEA 사용자가 맞춤형 광고에 동의하지 않은 경우, 비맞춤형 광고가 대신
+        게재됩니다.</p>
       <ul>
-        <li>정책: <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google 광고 개인정보처리방침</a></li>
+        <li>정책: <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google 광고
+            개인정보처리방침</a></li>
         <li>광고 ID 재설정: 기기의 설정 → 개인정보 → 광고에서 "광고 ID 재설정" 가능</li>
       </ul>
     </div>
@@ -255,14 +332,21 @@
       <ul>
         <li>결제 처리: Google Play에서 직접 처리하며, 개발자는 카드 번호 등 결제 수단 정보를 수집하지 않습니다</li>
         <li>개발자가 수신하는 정보: 주문 ID, 구매 상품명, 구매 시각, 결제 상태</li>
-        <li>정책: <a href="https://payments.google.com/payments/apis-secure/u/0/get_legal_document?ldo=0&ldt=privacynotice" target="_blank" rel="noopener">Google Payments 개인정보처리방침</a></li>
+        <li>정책: <a
+            href="https://payments.google.com/payments/apis-secure/u/0/get_legal_document?ldo=0&ldt=privacynotice"
+            target="_blank" rel="noopener">Google Payments 개인정보처리방침</a></li>
       </ul>
     </div>
 
     <h3>2.3 네트워크 통신 <span class="badge badge-server">서버 통신</span></h3>
     <table>
       <thead>
-        <tr><th>기능</th><th>통신 대상</th><th>전송 데이터</th><th>목적</th></tr>
+        <tr>
+          <th>기능</th>
+          <th>통신 대상</th>
+          <th>전송 데이터</th>
+          <th>목적</th>
+        </tr>
       </thead>
       <tbody>
         <tr>
@@ -299,12 +383,28 @@
     <p>개발자는 이용자의 개인정보를 제3자에게 판매하거나 임대하지 않습니다. 다만, 다음의 경우에 한해 정보가 처리될 수 있습니다.</p>
     <table>
       <thead>
-        <tr><th>서드파티</th><th>목적</th><th>처리 데이터</th></tr>
+        <tr>
+          <th>서드파티</th>
+          <th>목적</th>
+          <th>처리 데이터</th>
+        </tr>
       </thead>
       <tbody>
-        <tr><td>Google (Firebase Analytics)</td><td>앱 사용 분석</td><td>익명 사용 통계</td></tr>
-        <tr><td>Google (AdMob)</td><td>광고 게재</td><td>광고 ID, 기기 정보</td></tr>
-        <tr><td>Google (Play Billing)</td><td>결제 처리</td><td>주문 정보</td></tr>
+        <tr>
+          <td>Google (Firebase Analytics)</td>
+          <td>앱 사용 분석</td>
+          <td>익명 사용 통계</td>
+        </tr>
+        <tr>
+          <td>Google (AdMob)</td>
+          <td>광고 게재</td>
+          <td>광고 ID, 기기 정보</td>
+        </tr>
+        <tr>
+          <td>Google (Play Billing)</td>
+          <td>결제 처리</td>
+          <td>주문 정보</td>
+        </tr>
       </tbody>
     </table>
 
@@ -312,10 +412,14 @@
     <h2>5. EU/EEA 이용자 권리 (GDPR)</h2>
     <p>유럽 경제 지역(EEA), 영국 또는 스위스에 거주하는 이용자는 다음의 권리를 가집니다.</p>
     <ul>
-      <li><strong>동의 관리</strong> — 앱 최초 실행 시 GDPR 동의 화면(Google UMP SDK)이 자동으로 표시됩니다. 맞춤형 광고 동의, 비맞춤 광고만 허용, 옵션 관리, 동의하지 않음 또는 닫기를 선택할 수 있습니다.</li>
-      <li><strong>동의 철회·재설정</strong> — 앱 설정(⚙️) → "광고 설정" 섹션 → "관리" 버튼을 통해 언제든지 동의를 변경하거나 철회할 수 있습니다. 이 설정 메뉴는 EU/EEA 등 GDPR 적용 지역 사용자에게만 표시됩니다.</li>
-      <li><strong>동의 상태 확인 주기</strong> — 앱 실행 시마다 Google UMP 서버에 동의 상태를 조회하여 최신 상태를 반영합니다. 앱 실행 중 설정 페이지를 재방문할 때는 재조회하지 않습니다.</li>
-      <li><strong>데이터 삭제</strong> — 앱을 삭제하면 기기 내 모든 학습 데이터와 동의 상태 기록이 즉시 삭제됩니다. Firebase Analytics의 익명 데이터는 Google 보존 정책에 따라 자동 만료됩니다.</li>
+      <li><strong>동의 관리</strong> — 앱 최초 실행 시 GDPR 동의 화면(Google UMP SDK)이 자동으로 표시됩니다. 맞춤형 광고 동의, 비맞춤 광고만 허용, 옵션 관리, 동의하지
+        않음 또는 닫기를 선택할 수 있습니다.</li>
+      <li><strong>동의 철회·재설정</strong> — 앱 설정(⚙️) → "광고 설정" 섹션 → "관리" 버튼을 통해 언제든지 동의를 변경하거나 철회할 수 있습니다. 이 설정 메뉴는 EU/EEA 등
+        GDPR 적용 지역 사용자에게만 표시됩니다.</li>
+      <li><strong>동의 상태 확인 주기</strong> — 앱 실행 시마다 Google UMP 서버에 동의 상태를 조회하여 최신 상태를 반영합니다. 앱 실행 중 설정 페이지를 재방문할 때는 재조회하지
+        않습니다.</li>
+      <li><strong>데이터 삭제</strong> — 앱을 삭제하면 기기 내 모든 학습 데이터와 동의 상태 기록이 즉시 삭제됩니다. Firebase Analytics의 익명 데이터는 Google 보존
+        정책에 따라 자동 만료됩니다.</li>
       <li><strong>접근 및 이동</strong> — 기기 내 저장된 데이터는 이용자 본인만 접근 가능합니다.</li>
     </ul>
 
@@ -323,14 +427,38 @@
     <h2>6. 데이터 보관 및 삭제</h2>
     <table>
       <thead>
-        <tr><th>데이터 유형</th><th>보관 기간</th><th>삭제 방법</th></tr>
+        <tr>
+          <th>데이터 유형</th>
+          <th>보관 기간</th>
+          <th>삭제 방법</th>
+        </tr>
       </thead>
       <tbody>
-        <tr><td>기기 내 학습 데이터</td><td>앱 삭제 시까지</td><td>앱 삭제 또는 앱 데이터 초기화</td></tr>
-        <tr><td>GDPR 동의 상태</td><td>앱 삭제 시까지</td><td>앱 삭제 또는 앱 설정 → 광고 설정 → 관리</td></tr>
-        <tr><td>Firebase Analytics</td><td>Google 정책 (최대 14개월)</td><td>자동 만료</td></tr>
-        <tr><td>AdMob 광고 데이터</td><td>Google 광고 정책 준수</td><td>광고 ID 재설정 (기기 설정) 또는 앱 내 동의 재설정</td></tr>
-        <tr><td>Google Play 결제 기록</td><td>Google 정책 (법적 보관 의무)</td><td>Google Play 고객센터 문의</td></tr>
+        <tr>
+          <td>기기 내 학습 데이터</td>
+          <td>앱 삭제 시까지</td>
+          <td>앱 삭제 또는 앱 데이터 초기화</td>
+        </tr>
+        <tr>
+          <td>GDPR 동의 상태</td>
+          <td>앱 삭제 시까지</td>
+          <td>앱 삭제 또는 앱 설정 → 광고 설정 → 관리</td>
+        </tr>
+        <tr>
+          <td>Firebase Analytics</td>
+          <td>Google 정책 (최대 14개월)</td>
+          <td>자동 만료</td>
+        </tr>
+        <tr>
+          <td>AdMob 광고 데이터</td>
+          <td>Google 광고 정책 준수</td>
+          <td>광고 ID 재설정 (기기 설정) 또는 앱 내 동의 재설정</td>
+        </tr>
+        <tr>
+          <td>Google Play 결제 기록</td>
+          <td>Google 정책 (법적 보관 의무)</td>
+          <td>Google Play 고객센터 문의</td>
+        </tr>
       </tbody>
     </table>
 
@@ -340,20 +468,38 @@
     <h3>7.1 광고 유형</h3>
     <ul>
       <li><strong>배너 광고</strong> — 대시보드 및 캘린더 화면 하단에 상시 표시됩니다. 화면 너비에 따라 자동 크기 조절(AnchoredAdaptive)됩니다.</li>
-      <li><strong>전면 광고</strong> — 타이머 종료 후 공부기록 저장 시, 또는 교재 목차 선택 완료 시, 3회 이벤트마다 1회 표시됩니다. 학습(집중/휴식) 진행 중에는 절대 표시되지 않습니다.</li>
-      <li><strong>앱 오픈 광고</strong> — 앱이 백그라운드에서 돌아올 때 조건부로 표시됩니다. 타이머 진행 중, 직전 표시 후 5분 미경과, 집중 부스터 활성 중, 또는 백그라운드 체류 5초 미만인 경우에는 표시되지 않습니다.</li>
+      <li><strong>전면 광고</strong> — 타이머 종료 후 공부기록 저장 시, 또는 교재 목차 선택 완료 시, 3회 이벤트마다 1회 표시됩니다. 학습(집중/휴식) 진행 중에는 절대 표시되지
+        않습니다.</li>
+      <li><strong>앱 오픈 광고</strong> — 앱이 백그라운드에서 돌아올 때 조건부로 표시됩니다. 타이머 진행 중, 직전 표시 후 5분 미경과, 집중 부스터 활성 중, 또는 백그라운드 체류 5초
+        미만인 경우에는 표시되지 않습니다.</li>
     </ul>
 
     <h3>7.2 집중 부스터 (인앱결제)</h3>
     <p>"집중 부스터"를 구매하면 구매 기간 동안 모든 광고가 제거됩니다.</p>
     <table>
       <thead>
-        <tr><th>상품</th><th>기간</th><th>가격 (KRW)</th></tr>
+        <tr>
+          <th>상품</th>
+          <th>기간</th>
+          <th>가격 (KRW)</th>
+        </tr>
       </thead>
       <tbody>
-        <tr><td>집중 부스터 1일</td><td>24시간</td><td>₩100</td></tr>
-        <tr><td>집중 부스터 7일</td><td>7일</td><td>₩500</td></tr>
-        <tr><td>집중 부스터 1개월</td><td>30일</td><td>₩1,500</td></tr>
+        <tr>
+          <td>집중 부스터 1일</td>
+          <td>24시간</td>
+          <td>₩100</td>
+        </tr>
+        <tr>
+          <td>집중 부스터 7일</td>
+          <td>7일</td>
+          <td>₩500</td>
+        </tr>
+        <tr>
+          <td>집중 부스터 1개월</td>
+          <td>30일</td>
+          <td>₩1,500</td>
+        </tr>
       </tbody>
     </table>
     <div class="highlight">
@@ -392,14 +538,15 @@
     <div class="card">
       <div class="card-title">개발자 정보</div>
       <ul>
-        <li><strong>개발자</strong>: Motio Works</li>
+        <li><strong>개발자</strong>: Motio Work</li>
         <li><strong>이메일</strong>: <a href="mailto:motiowork@gmail.com">motiowork@gmail.com</a></li>
-        <li><strong>웹사이트</strong>: <a href="https://motiowork.github.io/web/" target="_blank" rel="noopener">https://motiowork.github.io/web/</a></li>
+        <li><strong>웹사이트</strong>: <a href="https://motiowork.github.io/web/" target="_blank"
+            rel="noopener">https://motiowork.github.io/web/</a></li>
       </ul>
     </div>
 
     <footer>
-      <p>&copy; 2026 Motio Works. All rights reserved.</p>
+      <p>&copy; 2026 Motio Work. All rights reserved.</p>
       <p style="margin-top: 8px;">
         <a href="https://motiowork.github.io/web/">홈으로 돌아가기</a>
       </p>
@@ -407,4 +554,5 @@
 
   </div>
 </body>
+
 </html>
