@@ -300,10 +300,11 @@
         <li>수집 항목: 앱 인스턴스 식별자, 기기 모델, OS 버전, 앱 버전, 화면 조회 이벤트, 세션 시간·수,
           지역(국가/도시 수준), 최초 실행, 앱 열기·업데이트 이벤트, 인앱 구매 이벤트</li>
         <li>개인 식별: 불가 (익명 집계 데이터)</li>
-        <li>전송 보안: 모든 데이터는 <strong>TLS(전송 계층 보안)</strong> 프로토콜로 암호화되어 전송됩니다</li>
         <li>정책: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase
             개인정보처리방침</a> |
-          <a href="https://support.google.com/firebase/answer/6318039?hl=ko" target="_blank" rel="noopener">Firebase 데이터 수집 안내</a></li>
+          <a href="https://support.google.com/firebase/answer/6318039?hl=ko" target="_blank" rel="noopener">Firebase 데이터
+            수집 안내</a>
+        </li>
       </ul>
     </div>
 
@@ -313,12 +314,14 @@
       <p>Google Mobile Ads SDK는 광고 게재, 분석, 사기 방지를 위해
         <strong>광고 ID(GAID)</strong> 및 <strong>앱 세트 ID(App Set ID)</strong>를 자동으로 수집합니다.
         추가로 기기 정보, 대략적인 위치 정보가 수집될 수 있습니다.
-        EU/EEA 사용자가 맞춤형 광고에 동의하지 않은 경우, 비맞춤형 광고가 대신 게재됩니다.</p>
+        EU/EEA 사용자가 맞춤형 광고에 동의하지 않은 경우, 비맞춤형 광고가 대신 게재됩니다.
+      </p>
       <ul>
-        <li>전송 보안: 모든 데이터는 <strong>TLS(전송 계층 보안)</strong> 프로토콜로 암호화되어 전송됩니다</li>
         <li>정책: <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google 광고
             개인정보처리방침</a> |
-          <a href="https://developers.google.com/admob/android/privacy/play-data-disclosure?hl=ko" target="_blank" rel="noopener">AdMob 데이터 공개 안내</a></li>
+          <a href="https://developers.google.com/admob/android/privacy/play-data-disclosure?hl=ko" target="_blank"
+            rel="noopener">AdMob 데이터 공개 안내</a>
+        </li>
         <li>광고 ID 재설정: 기기의 설정 → 개인정보 → 광고에서 "광고 ID 재설정" 또는 삭제 가능</li>
       </ul>
     </div>
@@ -348,7 +351,7 @@
         <tr>
           <td>교재 정보 및 목차(TOC) 검색</td>
           <td>Google Cloud Firestore</td>
-          <td>ISBN 번호</td>
+          <td>ISBN 번호, 검색 일시</td>
           <td>교재 정보(제목, 저자, 페이지 수) 및 목차 데이터 조회·적용</td>
         </tr>
       </tbody>
@@ -399,28 +402,28 @@
         <tr>
           <td>Google (Firebase Analytics)</td>
           <td>앱 사용 분석</td>
-          <td>앱 인스턴스 식별자, 기기 모델, OS 버전, 세션 정보, 지역, 화면 조회·앱 이벤트</td>
+          <td>수집 정보와 동일</td>
           <td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase 개인정보처리방침</a>
           </td>
         </tr>
         <tr>
           <td>Google (AdMob)</td>
           <td>광고 게재</td>
-          <td>광고 ID (GAID), 앱 세트 ID, 기기 정보, 대략적 위치 정보</td>
+          <td>수집 정보와 동일</td>
           <td><a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google 광고 정책</a>
           </td>
         </tr>
         <tr>
           <td>Google (Cloud Firestore)</td>
           <td>교재 정보 제공</td>
-          <td>ISBN 번호, 검색 일시</td>
+          <td>수집 정보와 동일</td>
           <td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase 개인정보처리방침</a>
           </td>
         </tr>
         <tr>
           <td>Google (Play Billing)</td>
           <td>결제 처리</td>
-          <td>주문 ID, 구매 상품명, 구매 시각, 결제 상태</td>
+          <td>수집 정보와 동일</td>
           <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 개인정보처리방침</a></td>
         </tr>
       </tbody>
@@ -478,7 +481,7 @@
         <tr>
           <td>AdMob 광고 데이터</td>
           <td>Google 광고 정책 준수</td>
-          <td>광고 ID 재설정 (기기 설정) 또는 앱 내 동의 재설정</td>
+          <td>광고 ID 재설정 (기기 설정)</td>
         </tr>
         <tr>
           <td>Google Play 결제 기록</td>
