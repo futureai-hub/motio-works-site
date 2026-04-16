@@ -1,4 +1,20 @@
 {
+  "_readme": [
+    "⚠️  개인정보처리방침을 수정할 때 반드시 아래 규칙을 따르세요.",
+    "",
+    "1. privacy-policy.html 내용을 수정한다.",
+    "2. 이 파일(privacy-version.json)의 lastUpdated를 수정 날짜로 업데이트한다.",
+    "   형식: YYYYMMDD  예) 2027년 3월 5일 → '20270305'",
+    "",
+    "3. effectiveDate는 최초 시행일이므로 절대 변경하지 않는다.",
+    "",
+    "4. effectiveDate == lastUpdated 이면:",
+    "   - 앱 팝업 ❌  /  웹페이지에 최종 업데이트일 표시 ❌",
+    "   effectiveDate != lastUpdated 이면:",
+    "   - 앱 팝업 ✅  /  웹페이지에 최종 업데이트일 별도 표시 ✅",
+    "",
+    "5. 두 파일을 함께 GitHub에 push한다. (앱 업데이트 불필요)"
+  ],
   "effectiveDate": "20260416",
-  "lastUpdated": "20260416"
+  "lastUpdated": "20260417"
 }
