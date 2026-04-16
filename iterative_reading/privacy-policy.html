@@ -297,22 +297,29 @@
       <div class="card-title">Google Firebase Analytics</div>
       <p>앱 사용 패턴(화면 전환, 기능 사용 빈도)을 익명으로 분석하여 서비스 품질을 개선합니다.</p>
       <ul>
-        <li>수집 항목: 기기 모델, OS 버전, 앱 버전, 화면 조회 이벤트, 세션 시간</li>
+        <li>수집 항목: 앱 인스턴스 식별자, 기기 모델, OS 버전, 앱 버전, 화면 조회 이벤트, 세션 시간·수,
+          지역(국가/도시 수준), 최초 실행, 앱 열기·업데이트 이벤트, 인앱 구매 이벤트</li>
         <li>개인 식별: 불가 (익명 집계 데이터)</li>
+        <li>전송 보안: 모든 데이터는 <strong>TLS(전송 계층 보안)</strong> 프로토콜로 암호화되어 전송됩니다</li>
         <li>정책: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase
-            개인정보처리방침</a></li>
+            개인정보처리방침</a> |
+          <a href="https://support.google.com/firebase/answer/6318039?hl=ko" target="_blank" rel="noopener">Firebase 데이터 수집 안내</a></li>
       </ul>
     </div>
 
     <div class="card">
       <div class="card-title">Google AdMob (광고)</div>
       <p>본 앱은 Google AdMob을 통해 광고를 게재합니다.</p>
-      <p>AdMob은 맞춤형 광고 제공을 위해 광고 ID(GAID), 기기 정보, 대략적인 위치 정보를 수집할 수 있습니다.
+      <p>Google Mobile Ads SDK는 광고 게재, 분석, 사기 방지를 위해
+        <strong>광고 ID(GAID)</strong> 및 <strong>앱 세트 ID(App Set ID)</strong>를 자동으로 수집합니다.
+        추가로 기기 정보, 대략적인 위치 정보가 수집될 수 있습니다.
         EU/EEA 사용자가 맞춤형 광고에 동의하지 않은 경우, 비맞춤형 광고가 대신 게재됩니다.</p>
       <ul>
+        <li>전송 보안: 모든 데이터는 <strong>TLS(전송 계층 보안)</strong> 프로토콜로 암호화되어 전송됩니다</li>
         <li>정책: <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google 광고
-            개인정보처리방침</a></li>
-        <li>광고 ID 재설정: 기기의 설정 → 개인정보 → 광고에서 "광고 ID 재설정" 가능</li>
+            개인정보처리방침</a> |
+          <a href="https://developers.google.com/admob/android/privacy/play-data-disclosure?hl=ko" target="_blank" rel="noopener">AdMob 데이터 공개 안내</a></li>
+        <li>광고 ID 재설정: 기기의 설정 → 개인정보 → 광고에서 "광고 ID 재설정" 또는 삭제 가능</li>
       </ul>
     </div>
 
@@ -358,12 +365,12 @@
       </li>
       <li><strong>동의 절차</strong>: ISBN 검색 화면에서 <strong>별도 체크박스</strong>를 통해 사전 동의를 받습니다.
         동의하지 않더라도 <strong>직접 교재 정보를 수동으로 입력</strong>하여 앱의 모든 기능을 정상적으로 사용할 수 있습니다.</li>
-      <li><strong>개인 식별</strong>: 불가 — ISBN과 검색 일시만 기록되며, 이용자의 계정이나 기기 정보와 연결되지 않습니다.</li>
+      <li><strong>개인 식별</strong>: 불가 — ISBN별로 최근 조회된 일시만 기록되며, 이용자의 계정이나 기기 정보와 연결되지 않습니다.</li>
     </ul>
 
     <div class="highlight">
       위 네트워크 통신에서 이용자의 개인정보(이름, 이메일, 전화번호 등)는 일절 전송되지 않습니다.
-      오직 교재 식별을 위한 ISBN 번호만 전송됩니다.
+      오직 교재 식별을 위한 ISBN 번호와 검색 일시만 전송됩니다.
     </div>
 
     <!-- ─── 3. 정보 이용 목적 ─── -->
@@ -392,21 +399,21 @@
         <tr>
           <td>Google (Firebase Analytics)</td>
           <td>앱 사용 분석</td>
-          <td>익명 사용 통계 (기기 모델, OS 버전, 화면 조회 이벤트)</td>
+          <td>앱 인스턴스 식별자, 기기 모델, OS 버전, 세션 정보, 지역, 화면 조회·앱 이벤트</td>
           <td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase 개인정보처리방침</a>
           </td>
         </tr>
         <tr>
           <td>Google (AdMob)</td>
           <td>광고 게재</td>
-          <td>광고 ID (GAID), 기기 정보, 대략적 위치 정보</td>
+          <td>광고 ID (GAID), 앱 세트 ID, 기기 정보, 대략적 위치 정보</td>
           <td><a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google 광고 정책</a>
           </td>
         </tr>
         <tr>
           <td>Google (Cloud Firestore)</td>
           <td>교재 정보 제공</td>
-          <td>ISBN 번호, 검색 일시 (별도 동의 시)</td>
+          <td>ISBN 번호, 검색 일시</td>
           <td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase 개인정보처리방침</a>
           </td>
         </tr>
