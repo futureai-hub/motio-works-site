@@ -277,6 +277,15 @@
       font-size: 12px;
     }
 
+    /* --- Video --- */
+    .hero-video {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 24px;
+      display: block;
+      margin: 24px auto 8px;
+    }
+
     /* --- Footer --- */
     footer {
       text-align: center;
@@ -288,6 +297,53 @@
 
     footer a {
       color: var(--cyan);
+      text-decoration: none;
+    }
+
+    .contact-box {
+      max-width: 640px;
+      margin: 0 auto 24px;
+      padding: 0 24px;
+    }
+
+    .contact-inner {
+      background: linear-gradient(135deg, rgba(187,58,255,0.06), rgba(0,229,255,0.04));
+      border: 1px solid rgba(187,58,255,0.12);
+      border-radius: 14px;
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .contact-label {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: rgba(255,255,255,0.4);
+      text-transform: uppercase;
+      flex-shrink: 0;
+    }
+
+    .contact-email {
+      font-size: 14px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-left: auto;
+    }
+
+    .footer-bottom {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .footer-ads-link {
+      font-size: 11px;
+      color: rgba(255,255,255,0.2);
       text-decoration: none;
     }
 
@@ -309,6 +365,16 @@
       .app-badge {
         display: none;
       }
+
+      .contact-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .contact-email {
+        margin-left: 0;
+        align-self: flex-end;
+      }
     }
   </style>
 </head>
@@ -321,8 +387,7 @@
           alt="Motio Work" style="width: 160%; height: 160%; margin: -32.5% 0 0 -32.5%; display: block;"></div>
       <div class="logo-text">Motio <span>Work</span></div>
     </div>
-    <video src="MotioWorkVision.mp4" autoplay loop muted playsinline
-      style="width: 500px; border-radius: 24px; display: block; margin: 24px auto 8px;"></video>
+    <video src="MotioWorkVision.mp4" autoplay loop muted playsinline class="hero-video"></video>
     <div class="tagline-card">
       <p class="tagline">
         <!-- A <em>user-centered</em> app development studio that combines
@@ -369,20 +434,19 @@
   </div>
 
   <footer>
-    <div style="max-width: 640px; margin: 0 auto 24px; padding: 0 24px;">
-      <div
-        style="background: linear-gradient(135deg, rgba(187,58,255,0.06), rgba(0,229,255,0.04)); border: 1px solid rgba(187,58,255,0.12); border-radius: 14px; padding: 20px 24px; position: relative; text-align: center; min-height: 24px;">
-        <span
-          style="position: absolute; left: 24px; top: 50%; transform: translateY(-50%); font-size: 12px; font-weight: 700; letter-spacing: 1px; color: rgba(255,255,255,0.4); text-transform: uppercase;">Contact
-          Us</span>
-        <a href="mailto:motioWork@gmail.com" style="font-size: 14px; text-decoration: none; font-weight: 600;"><span
-            style="color: white; -webkit-text-fill-color: white;">✉</span> <span
-            style="background: linear-gradient(90deg, #BB3AFF, #FF2D7B); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">motioWork@gmail.com</span></a>
-        <a href="app-ads.txt"
-          style="position: absolute; right: 24px; top: 50%; transform: translateY(-50%); font-size: 11px; color: rgba(255,255,255,0.2); text-decoration: none;">app-ads.txt</a>
+    <div class="contact-box">
+      <div class="contact-inner">
+        <span class="contact-label">Contact Us</span>
+        <a href="mailto:motioWork@gmail.com" class="contact-email">
+          <span style="color: white; -webkit-text-fill-color: white;">✉</span>
+          <span style="background: linear-gradient(90deg, #BB3AFF, #FF2D7B); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">motioWork@gmail.com</span>
+        </a>
       </div>
     </div>
-    <p>&copy; 2026 Motio Work. All rights reserved.</p>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Motio Work. All rights reserved.</p>
+      <a href="app-ads.txt" class="footer-ads-link">app-ads.txt</a>
+    </div>
   </footer>
 
 </body>
