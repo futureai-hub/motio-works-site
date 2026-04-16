@@ -221,10 +221,7 @@
     <header>
       <div class="app-name">Iteration - N회독 플래너</div>
       <h1>개인정보처리방침</h1>
-      <p class="effective-date">
-        최초 시행일: 2026년 4월 16일<br>
-        최종 업데이트일: 2026년 4월 16일
-      </p>
+      <p class="effective-date" id="policy-dates">날짜 로딩 중...</p>
     </header>
 
     <!-- ─── 1. 개요 ─── -->
@@ -548,6 +545,23 @@
     </footer>
 
   </div>
+
+  <script>
+    (async function () {
+      try {
+        const res = await fetch('./privacy-version.json');
+        if (!res.ok) return;
+        const data = await res.json();
+        const fmt = (v) => `${v.substring(0,4)}년 ${parseInt(v.substring(4,6))}월 ${parseInt(v.substring(6,8))}일`;
+        const el = document.getElementById('policy-dates');
+        if (data.effectiveDate === data.lastUpdated) {
+          el.textContent = `시행일: ${fmt(data.effectiveDate)}`;
+        } else {
+          el.innerHTML = `최초 시행일: ${fmt(data.effectiveDate)}<br>최종 업데이트일: ${fmt(data.lastUpdated)}`;
+        }
+      } catch (_) {}
+    })();
+  </script>
 </body>
 
 </html>
