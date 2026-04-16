@@ -241,7 +241,11 @@
     <header>
       <div class="app-name">Iteration - N회독 플래너</div>
       <h1>개인정보처리방침</h1>
-      <p class="effective-date" id="policy-dates">날짜 로딩 중...</p>
+      <!-- JS가 privacy-version.json에서 날짜를 자동으로 읽어 덮어씁니다.
+           JS 실패(로컬 파일 열기 등) 시 아래 폴백 날짜가 표시됩니다. -->
+      <p class="effective-date" id="policy-dates">
+        시행일: 2026년 4월 16일
+      </p>
     </header>
 
     <!-- ─── 1. 개요 ─── -->
