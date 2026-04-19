@@ -319,7 +319,7 @@
       <p>앱 사용 패턴(화면 전환, 기능 사용 빈도)을 익명으로 분석하여 서비스 품질을 개선합니다.</p>
       <ul>
         <li>수집 항목: 앱 인스턴스 식별자, 기기 모델, OS 버전, 앱 버전, 화면 조회 이벤트, 세션 시간·수,
-          지역(국가/도시 수준), 최초 실행, 앱 열기·업데이트 이벤트, 인앱 구매 이벤트</li>
+          지역(국가/도시 수준), 최초 실행, 앱 열기·업데이트 이벤트, 인앱 구매 이벤트 등 각종 이벤트</li>
         <li>개인 식별: 불가 (익명 집계 데이터)</li>
         <li>정책: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase
             개인정보처리방침</a> |
@@ -352,7 +352,7 @@
       <p>본 앱은 Google Play 결제를 통해 인앱결제 상품을 판매합니다.</p>
       <ul>
         <li>결제 처리: Google Play에서 직접 처리하며, 개발자는 카드 번호 등 결제 수단 정보를 수집하지 않습니다</li>
-        <li>개발자가 수신하는 정보: 주문 ID, 구매 상품명, 구매 시각, 결제 상태</li>
+        <li>개발자가 수신하는 정보: 주문 ID, 상품 ID, 구매 토큰, 구매 시각, 결제 상태, 사용자 ID, 자동 갱신 여부 </li>
         <li>정책: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 개인정보처리방침</a></li>
       </ul>
     </div>
@@ -441,12 +441,6 @@
           <td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase 개인정보처리방침</a>
           </td>
         </tr>
-        <tr>
-          <td>Google (Play Billing)</td>
-          <td>결제 처리</td>
-          <td>수집 정보와 동일</td>
-          <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 개인정보처리방침</a></td>
-        </tr>
       </tbody>
     </table>
     <p>
@@ -455,6 +449,26 @@
         Responsibility</a>
       페이지에서 확인하실 수 있습니다.
     </p>
+
+    <!-- 4.1 처리 위탁 -->
+    <h2>4.1 처리 위탁</h2>
+    <p>개발자는 원활한 서비스 제공을 위해 다음과 같이 개인정보 처리 업무를 위탁하고 있습니다.</p>
+    <table>
+      <thead>
+        <tr>
+          <th>수탁업체</th>
+          <th>위탁 업무 내용</th>
+          <th>보유 및 이용 기간</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Google (Play Billing)</td>
+          <td>Google Play 인앱 결제 시스템 운영 및 결제 데이터 처리</td>
+          <td>회원 탈퇴 시 또는 위탁 계약 종료 시까지 (단, 관련 법령에 따라 보존할 필요가 있는 경우 해당 기간까지)</td>
+        </tr>
+      </tbody>
+    </table>
 
     <!-- ─── 5. GDPR ─── -->
     <h2>5. EU/EEA 이용자 권리 (GDPR)</h2>
@@ -469,7 +483,7 @@
         GDPR 적용 지역 사용자에게만 표시됩니다.</li>
       <li><strong>동의 상태 확인 주기</strong> — 앱 실행 시마다 Google UMP 서버에 동의 상태를 조회하여 최신 상태를 반영합니다.</li>
       <li><strong>데이터 삭제</strong> — 앱을 삭제하면 기기 내 모든 학습 데이터와 동의 상태 기록이 즉시 삭제됩니다. Firebase Analytics의 익명 데이터는 Google 보존
-        정책에 따라 자동 만료됩니다.</li>
+        정책에 따라 보관 또는 자동 만료됩니다.</li>
       <li><strong>접근 및 이동</strong> — 기기 내 저장된 데이터는 이용자 본인만 접근 가능합니다.</li>
     </ul>
 
@@ -496,8 +510,9 @@
         </tr>
         <tr>
           <td>Firebase Analytics</td>
-          <td>Google 정책 (최대 14개월)</td>
-          <td>자동 만료</td>
+          <td>Google 정책 참고</td>
+          <td><a href="https://support.google.com/analytics/answer/7667196?hl=ko" target="_blank" rel="noopener">Google
+              정책</a></td>
         </tr>
         <tr>
           <td>AdMob 광고 데이터</td>
@@ -576,14 +591,14 @@
         const res = await fetch('./privacy-version.json');
         if (!res.ok) return;
         const data = await res.json();
-        const fmt = (v) => `${v.substring(0,4)}년 ${parseInt(v.substring(4,6))}월 ${parseInt(v.substring(6,8))}일`;
+        const fmt = (v) => `${v.substring(0, 4)}년 ${parseInt(v.substring(4, 6))}월 ${parseInt(v.substring(6, 8))}일`;
         const el = document.getElementById('policy-dates');
         if (data.effectiveDate === data.lastUpdated) {
           el.textContent = `시행일: ${fmt(data.effectiveDate)}`;
         } else {
           el.innerHTML = `최초 시행일: ${fmt(data.effectiveDate)}<br>최종 업데이트일: ${fmt(data.lastUpdated)}`;
         }
-      } catch (_) {}
+      } catch (_) { }
     })();
   </script>
 </body>
